@@ -1,4 +1,5 @@
 package com.example.demo.DisruptorQuickStart快速使用;
+import	java.util.concurrent.TimeUnit;
 
 import com.lmax.disruptor.EventHandler;
 
@@ -16,6 +17,7 @@ public class OrderEventHandler implements EventHandler<OrderEvent> {
      */
     @Override
     public void onEvent(OrderEvent orderEvent, long l, boolean b) throws Exception {
+        Thread.sleep(Integer.MAX_VALUE);
         System.out.println("消费者 : " + orderEvent.getValue());
     }
 }

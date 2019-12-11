@@ -54,6 +54,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--UUID 生成依赖-->
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator -->
+        <dependency>
+            <groupId>com.fasterxml.uuid</groupId>
+            <artifactId>java-uuid-generator</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

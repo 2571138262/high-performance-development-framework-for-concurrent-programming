@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         
         // 参数准备工作
-        int ringBufferSize = 1024 * 1024;
+        int ringBufferSize = 4;
         ExecutorService exec = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         /**
@@ -47,7 +47,7 @@ public class Main {
 
         ByteBuffer bb = ByteBuffer.allocate(8);
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
             bb.putLong(0, i);
             producer.sendData(bb);
         }
